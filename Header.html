@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Header</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+CA+Guides&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+ <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+ 
+
+ <header class="bg-[#FDFBF7] text-black py-4 px-10 flex items-center justify-between fixed top-0 left-0 w-full z-50 shadow-md" x-data="{ open: false }">
+    <!-- Logo -->
+    <div class="mr-2">
+        <img src="./Assets/Frame 1.svg" alt="Logo" class="h-16 w-16">
+    </div>
+
+    <!-- Quote and Navigation -->
+    <div class="hidden md:flex flex-col items-center flex-1">
+        <h1 class="italic font-bold text-center mx-auto text-[#59895F] p-1 rounded-md mb-2" style="font-family: Helvetica;">
+            “Therapy helps your soul sprout in your own spiritual garden”
+        </h1>
+        <nav class="mt-2">
+            <ul class="flex space-x-2">
+                <li><button class="text-[22px] px-6 py-2" style="font-family: Helvetica;">Home</button></li>
+                <li><button class="text-[22px] px-6 py-2" style="font-family: Helvetica;">About</button></li>
+                <li><button class="text-[22px] px-6 py-2" style="font-family: Helvetica;">Services</button></li>
+                <li><button class="text-[22px] px-6 py-2" style="font-family: Helvetica;">Patients</button></li>
+                <li><button class="text-[22px] px-6 py-2" style="font-family: Helvetica;">Learn</button></li>
+                <li><button class="text-[22px] px-6 py-2" style="font-family: Helvetica;">Contact</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="hidden md:block text-right">
+        <p class="text-2xl text-black mb-4" style="font-family: Helvetica;">+1 234 567 890</p>
+        <div class="flex space-x-4 mt-2">
+            <button class="border border-[#59895F] text-[#59895F] px-4 py-2">Patients portal</button>
+            <button class="bg-[#D9A497] text-white px-4 py-2">Book consultation</button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button @click="open = !open" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <!-- Mobile Menu Popup -->
+    <div x-show="open" @click.away="open = false" class="absolute top-16 left-0 w-full bg-[#FDFBF7] shadow-md md:hidden flex flex-col items-center p-4 space-y-4 z-50">
+        <nav>
+            <ul class="flex flex-col space-y-2 text-center">
+                <li><button class="text-xl py-2" style="font-family: Helvetica;">Home</button></li>
+                <li><button class="text-xl py-2" style="font-family: Helvetica;">About</button></li>
+                <li><button class="text-xl py-2" style="font-family: Helvetica;">Services</button></li>
+                <li><button class="text-xl py-2" style="font-family: Helvetica;">Patients</button></li>
+                <li><button class="text-xl py-2" style="font-family: Helvetica;">Learn</button></li>
+                <li><button class="text-xl py-2" style="font-family: Helvetica;">Contact</button></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+
+ <section class="relative h-screen bg-fixed bg-center bg-cover pt-24 md:pt-32" style="background-image: url('./Assets/denver\ skyline2000\ 1.png');">
+     <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+         <div class="relative text-center text-white text-5xl font-semibold">
+             <span>Transform <i>Your Relationships</i> </span> 
+             <span class="block mb-6"><i>and Career</i></span>
+     
+             <p class="text-sm text-center text-white mb-8">
+                 <i>Flexible, Personal, Confidential Telehealth Therapy  
+                 <br>— Empowering Adults Across Colorado.</i>
+             </p>
+     
+             <button class="bg-[#D9A497] text-white px-4 py-3 text-lg font-semibold shadow-md hover:bg-[#c98a7f] transition duration-300">
+                 Get Started
+             </button>
+         </div>
+     </div>
+ </section>
+ 
+    
+    <section class="py-10">
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-10">
+            
+            <!-- Left Side - Image -->
+            <img src="./Assets/shutterstock_1813119916-SMALL 1.png" 
+                 alt="Descriptive Text" 
+                 class="w-full md:w-1/3 h-auto rounded-lg mb-6 md:mb-0 md:ml-40">
+    
+            <!-- Right Side - Text Content -->
+            <div class="w-full md:w-1/2 text-center md:text-left mx-auto">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <span class="text-black">Welcome to the</span> <br> 
+                    <span class="text-black font-semibold italic">new wave of therapy,</span> <br> 
+                    <span class="text-black">with Melissa Cederquist!</span>
+                </h2>
+                
+                <p class="text-base sm:text-lg text-gray-600">
+                    I am incredibly honored that you are considering sharing parts of your story with me. At Cederquist Counseling, I strive to provide an uplifting, focused, and open-minded environment for therapy. Research indicates that the relationship between you and your therapist (the therapist alliance) is one of the most important factors in determining successful outcomes in therapy. Which is why I prioritize cultivating a nurturing and professional, yet approachable therapeutic relationship with my clients.
+                </p>
+            </div>
+    
+        </div>
+    </section>
+
+<section class="text-center bg-[#E4E9E1] py-10">
+    <h2 class="text-3xl font-bold text-[#325439] mb-8">
+        Bottom Line: <span class="text-[#325439]">it’s important that you like and trust your therapist!</span>
+    </h2>
+    
+    <button class="bg-[#D9A497] text-white px-6 py-3 mb-6 text-lg font-semibold shadow-md hover:bg-[#c98a7f] transition duration-300">
+        Get Started
+    </button>
+</section>
+
+<section class="flex flex-col md:flex-row items-center w-full min-h-screen">
+    <!-- Left Side - Text Content with Grey Background -->
+    <div class="w-full md:w-1/2 bg-gray-100 p-6 md:p-10 flex flex-col justify-center h-full md:min-h-screen">
+        <h2 class="text-base sm:text-lg font-light text-center text-gray-900 mb-4">
+            I believe that therapy is one of the best things you can do for yourself. It is an investment in your future that can bring transformation across all avenues of life. Most people feel stuck in at least one area of their life. We repeatedly take the same actions, yet expect different results. Sometimes we may even think that other people have the responsibility to change, not us. However,
+        </h2>
+        <h1 class="italic text-2xl sm:text-3xl md:text-4xl text-[#325439] text-center mb-6">
+            “The only thing we truly have control over in this life is ourselves.”
+        </h1>
+
+        <p class="text-base sm:text-lg text-center text-gray-600">
+            Universally, we all have patterns of behavior and ways of being with others, ourselves, and the world that we might want to better understand or change.
+        </p>
+    </div>
+
+    <!-- Right Side - Full Height Image -->
+    <div class="w-full md:w-1/2 h-auto md:h-screen">
+        <img src="./Assets/shutterstock_1483320563 1.png" 
+            alt="Descriptive Text" 
+            class="w-full h-full object-cover">
+    </div>
+</section>
+
+<section class="relative h-[80vh] bg-fixed bg-center bg-cover flex items-center px-4 sm:px-10" style="background-image: url('./Assets/Frame\ 63.svg');">
+    <div class="w-full md:w-2/5 ml-auto text-center md:text-center md:pr-10">
+        <p class="text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] sm:leading-[26px] md:leading-[29px] text-black mb-4 sm:mb-6">
+            Therapy provides a pathway to making those changes by cultivating a strong therapeutic alliance and providing you with empirically backed tools to help get to where you want to be. The act of sharing your story with a compassionate, objective, third-party listener can be profoundly healing for your past, present, and future self. When someone else can witness your experience from an unbiased perspective, it allows you to
+        </p>
+        
+        <h2 class="text-[22px] sm:text-[28px] md:text-[36px] leading-[28px] sm:leading-[36px] md:leading-[45px] mb-4 sm:mb-6 font-bold text-gray-900 italic">
+            <span class="text-black">“see yourself more clearly, get</span> <br> 
+            <span class="text-black">unstuck, and begin shifting</span> <br> 
+            <span class="text-black">patterns of behavior that no longer serve you.”</span>
+        </h2>
+        
+        <div class="flex justify-center">
+            <button class="bg-[#D9A497] text-white px-5 py-2 sm:px-6 sm:py-3 mb-4 sm:mb-6 text-base sm:text-lg font-semibold shadow-md hover:bg-[#c98a7f] transition duration-300">
+                Start Today
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="flex flex-col md:flex-row items-center py-0 w-full h-auto md:h-screen">
+    <!-- Left Side - Text Content with Grey Background -->
+    <div class="w-full md:w-1/2 bg-gray-100 p-10 h-auto md:h-full flex flex-col justify-center">
+        <div class="w-4/5 mx-auto max-w-7xl">
+            <h2 class="text-3xl md:text-5xl italic text-gray-900 mb-6 md:mb-8">
+                The Power of Therapy
+            </h2>
+            <p class="text-base md:text-lg mb-4 md:mb-6">
+                Beyond my personal belief in the power of therapy, research consistently supports its effectiveness in improving mental health and overall well-being. Studies show that therapy has a positive impact across a wide range of psychological concerns, from managing stress and anxiety to navigating relationship challenges and achieving personal growth. This sample of studies emphasizes therapy’s broad and long-lasting positive impact on mental health, emotional regulation, and overall quality of life.
+            </p>
+        </div>
+    
+        <div class="w-4/5 mx-auto space-y-4 max-w-7xl">
+            <!-- Accordion Item 1 -->
+            <details class="group border border-gray-300 rounded-lg p-4">
+                <summary class="flex justify-between items-center cursor-pointer font-semibold text-base md:text-lg text-gray-800">
+                     Effectiveness for Anxiety and Depression
+                    <span class="transition-transform duration-300 group-open:rotate-180">▼</span>
+                </summary>
+                <p class="mt-2 text-gray-600 text-sm md:text-base">
+                    A meta-analysis published in JAMA Psychiatry (2014) examined over 300 studies and found that psychotherapy, particularly cognitive-behavioral therapy (CBT), is highly effective in treating depression and anxiety disorders. The study reported that therapy was associated with significant improvements in symptoms, with benefits maintained long after treatment had ended (Cuijpers et al., 2014).
+                </p>
+            </details>
+    
+            <!-- Accordion Item 2 -->
+            <details class="group border border-gray-300 rounded-lg p-4">
+                <summary class="flex justify-between items-center cursor-pointer font-semibold text-base md:text-lg text-gray-800">
+                    Neurobiological Benefits
+                    <span class="transition-transform duration-300 group-open:rotate-180">▼</span>
+                </summary>
+                <p class="mt-2 text-gray-600 text-sm md:text-base">
+                    Therapy provides a safe space to process challenges, learn coping strategies, and achieve personal growth with the guidance of a professional.
+                </p>
+            </details>
+    
+            <!-- Accordion Item 3 -->
+            <details class="group border border-gray-300 rounded-lg p-4">
+                <summary class="flex justify-between items-center cursor-pointer font-semibold text-base md:text-lg text-gray-800">
+                    Improved Quality of Life
+                    <span class="transition-transform duration-300 group-open:rotate-180">▼</span>
+                </summary>
+                <p class="mt-2 text-gray-600 text-sm md:text-base">
+                    According to a study in Psychotherapy Research (2016), patients who engage in therapy report not only improvements in emotional symptoms but also higher life satisfaction and better interpersonal relationships. This highlights that the benefits of therapy extend beyond symptom reduction and contribute to overall well-being (Wampold, 2016).
+                </p>
+            </details>
+        </div>
+    </div>
+    
+    <!-- Right Side - Full Height Image -->
+    <div class="w-full md:w-1/2 h-64 md:h-full">
+        <img src="./Assets/shutterstock_1825888148-SMALL 1.jpg" 
+            alt="Descriptive Text" 
+            class="w-full h-full object-cover">
+    </div>
+</section>
+
+
+<section class="bg-[#FDFBF7] py-12">
+    <div class="w-4/5 mx-auto max-w-7xl text-center">
+        <h2 class="text-3xl md:text-4xl italic font-semibold mb-6 md:mb-8 text-gray-900">
+            My approach to therapy is
+        </h2>
+        
+        <div class="flex flex-wrap justify-center items-center mb-10 gap-x-6 gap-y-4">
+            <!-- Authentic -->
+            <div class="relative inline-block">
+                <h2 class="text-3xl md:text-5xl text-black relative z-10 px-2" style="font-family: 'Playfair Display', serif;">
+                    Authentic
+                </h2>
+                <div class="absolute left-0 bottom-0 w-full h-1/2 bg-[#D0E4D3] opacity-50"></div>
+            </div>
+        
+            <!-- Image -->
+            <img src="./Assets/flower 3.png" alt="Icon" class="w-10 h-10 md:w-12 md:h-12 object-contain mt-2">
+        
+            <!-- Personal -->
+            <div class="relative inline-block">
+                <h2 class="text-3xl md:text-5xl relative z-10 px-2" style="font-family: 'Playfair Display', serif;">Personal</h2>
+                <div class="absolute left-0 bottom-0 w-full h-1/2 bg-[#D0E4D3] opacity-50"></div>
+            </div>
+        
+            <!-- Image -->
+            <img src="./Assets/flower 3.png" alt="Icon" class="w-10 h-10 md:w-12 md:h-12 object-contain mt-2">
+        
+            <!-- Honest -->
+            <div class="relative inline-block">
+                <h2 class="text-3xl md:text-5xl text-black relative z-10 px-2" style="font-family: 'Playfair Display', serif;">Honest</h2>
+                <div class="absolute left-0 bottom-0 w-full h-1/2 bg-[#D0E4D3] opacity-50"></div>
+            </div>
+        
+            <!-- Image -->
+            <img src="./Assets/flower 3.png" alt="Icon" class="w-10 h-10 md:w-12 md:h-12 object-contain mt-2">
+        
+            <!-- Compassionate -->
+            <div class="relative inline-block">
+                <h2 class="text-3xl md:text-5xl text-black relative z-10 px-2" style="font-family: 'Playfair Display', serif;">Compassionate</h2>
+                <div class="absolute left-0 bottom-0 w-full h-1/2 bg-[#D0E4D3] opacity-50"></div>
+            </div>
+        
+            <!-- Image -->
+            <img src="./Assets/flower 3.png" alt="Icon" class="w-10 h-10 md:w-12 md:h-12 object-contain mt-2">
+        
+            <!-- Direct -->
+            <div class="relative inline-block">
+                <h2 class="text-3xl md:text-5xl text-black relative z-10 px-2" style="font-family: 'Playfair Display', serif;">Direct</h2>
+                <div class="absolute left-0 bottom-0 w-full h-1/2 bg-[#D0E4D3] opacity-50"></div>
+            </div>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-semibold mb-8 md:mb-12 tracking-wider">
+            Together, we will work collaboratively to:
+        </h1>
+    
+        <!-- Image Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+            <!-- Image 1 -->
+            <div class="text-center">
+                <img src="./Assets/Frame 23.png" alt="Therapy Approach 1" class="w-full h-auto rounded-lg mb-4 md:mb-6">
+                <p class="text-xl md:text-3xl text-gray-800 mt-2 md:mt-4">
+                    Cultivate a deeper awareness of the patterns and cycles that are keeping you stuck.
+                </p>
+            </div>
+        
+            <!-- Image 2 -->
+            <div class="text-center">
+                <img src="./Assets/Frame 25.png" alt="Therapy Approach 2" class="w-full h-auto rounded-lg mb-4 md:mb-6">
+                <p class="text-xl md:text-3xl text-gray-800 mt-2 md:mt-4">
+                    Liberate yourself from the limiting beliefs that are holding you back.
+                </p>
+            </div>
+        
+            <!-- Image 3 -->
+            <div class="text-center">
+                <img src="./Assets/Frame 28.png" alt="Therapy Approach 3" class="w-full h-auto rounded-lg mb-4 md:mb-6">
+                <p class="text-xl md:text-3xl text-gray-800 mt-2 md:mt-4">
+                    Enhance the overall quality of your life, relationships, and career.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-12 bg-[#FDE4C5]">
+    <div class="max-w-5xl mx-auto justify-center gap-12 mb-12">  <!-- Added 'mb-12' to create space -->
+        <h2 class="text-4xl font-playfair text-center font-bold italic mb-4 text-black">
+            At Cederquist Consulting, I offer a
+        </h2>
+       
+        <div class="flex items-center justify-center mb-8 relative">
+            <div class="relative inline-block text-center">
+                <h2 class="text-7xl text-black relative z-10" style="font-family: 'Playfair Display', serif;">
+                    Variety of Services
+                </h2>
+                <div class="absolute left-0 bottom-0 w-full h-1/2 bg-[#FFD6A2] opacity-100"></div>
+            </div>
+        </div>
+        <h2 class="text-4xl text-center font-semibold text-black">
+            to address your unique needs:
+        </h2>
+    </div>
+    
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+        <!-- Buttons -->
+        <button class="group flex flex-col items-center p-6 transition-transform transform hover:scale-105">
+            <img src="./Assets/drawing 1.png" alt="Icon 1" class="w-24 h-24 mb-2">
+            <span class="text-2xl font-light text-black hover:underline">Individual Therapy</span>
+        </button>
+
+        <button class="group flex flex-col items-center p-6 transition-transform transform hover:scale-105">
+            <img src="./Assets/27-hand in hand.png" alt="Icon 2" class="w-24 h-24 mb-2">
+            <span class="text-2xl font-light text-black hover:underline">Relational & Attachment</span>
+        </button>
+
+        <button class="group flex flex-col items-center p-6 transition-transform transform hover:scale-105">
+            <img src="./Assets/Group.png" alt="Icon 3" class="w-24 h-24 mb-4">
+            <span class="text-2xl font-light text-black hover:underline">Premarital Counseling</span>
+        </button>
+
+        <button class="group flex flex-col items-center p-6 transition-transform transform hover:scale-105">
+            <img src="./Assets/Vector.png" alt="Icon 4" class="w-24 h-24 mb-4">
+            <span class="text-2xl font-light text-black hover:underline">Pregnancy & Postpartum</span>
+        </button>
+
+        <button class="group flex flex-col items-center p-6 transition-transform transform hover:scale-105">
+            <img src="./Assets/Frame 78.png" alt="Icon 5" class="w-24 h-24 mb-4">
+            <span class="text-2xl font-light text-black hover:underline">Career Development</span>
+        </button>
+
+        <button class="group flex flex-col items-center p-6 transition-transform transform hover:scale-105">
+            <img src="./Assets/Group (1).png" alt="Icon 6" class="w-24 h-24 mb-4">
+            <span class="text-2xl font-light text-black hover:underline">Adult ADHD</span>
+        </button>
+
+        <button class="group flex flex-col items-center p-6 transition-transform transform hover:scale-105">
+            <img src="./Assets/dove 1.png" alt="Icon 7" class="w-24 h-24 mb-4">
+            <span class="text-2xl font-light text-black hover:underline">Anger Management</span>
+        </button>
+
+        <button class="group flex flex-col items-center p-6 transition-transform transform hover:scale-105">
+            <img src="./Assets/Group (2).png" alt="Icon 8" class="w-24 h-24 mb-4">
+            <span class="text-2xl font-light text-black hover:underline">Anxiety</span>
+        </button>
+    </div>
+    <div class="flex justify-center">
+        <button class="bg-[#D9A497] text-white px-10 py-4 mb-6 text-xl font-semibold shadow-md hover:bg-[#c98a7f] transition duration-300">
+            LEARN ABOUT SERVICE
+        </button>
+    </div>
+    
+    
+</section>
+
+<section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto text-center px-4">
+        <h2 class="text-6xl text-black mt-6" style="font-family: 'Noto Serif Display', serif;">See what others are saying</h2>
+        <p class="text-4xl font-bold italic text-black mb-14 mt-6"> about therapy with Melissa</p>
+    </div>
+
+    <div class="my-6 font-[sans-serif] max-w-6xl mx-auto px-4">
+        <div class="relative">
+            <div id="testimonial-slider" class="flex justify-between max-w-6xl mx-auto gap-x-6 flex-wrap md:flex-nowrap">
+                <div class="testimonial w-full md:w-1/3 flex-shrink-0 flex flex-col items-center mx-3 mb-6 md:mb-0">
+                    <img src="https://readymadeui.com/team-2.webp" class="w-28 h-28 rounded-full border-2 border-purple-600" />
+                    <div class="mt-6">
+                        <h4 class="text-sm font-bold text-gray-800">John Doe</h4>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-sm leading-relaxed text-gray-800">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial w-full md:w-1/3 flex-shrink-0 flex flex-col items-center mx-3 mb-6 md:mb-0">
+                    <img src="https://readymadeui.com/team-3.webp" class="w-28 h-28 rounded-full border-2 border-purple-600" />
+                    <div class="mt-6">
+                        <h4 class="text-sm font-bold text-gray-800">Mark Adair</h4>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-sm leading-relaxed text-gray-800">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.</p>
+                    </div>
+                </div>
+
+                <div class="testimonial w-full md:w-1/3 flex-shrink-0 flex flex-col items-center mx-3">
+                    <img src="https://readymadeui.com/team-4.webp" class="w-28 h-28 rounded-full border-2 border-purple-600" />
+                    <div class="mt-6">
+                        <h4 class="text-sm font-bold text-gray-800">Simon Konecki</h4>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <p class="text-sm leading-relaxed text-gray-800">The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-20 bg-[#E4E9E1] text-center">
+    <div class="max-w-6xl mx-auto px-6">
+        <!-- Paragraph -->
+        <p class="text-xl text-black mb-12">
+            Whether you’re in your 20s, 30s, 40s, or beyond, the time to start therapy is now! Intentionally create the life of your dreams,<br/> invest in yourself, break free from limiting patterns of beliefs, and understand yourself on a deeper, fundamental level. 
+        </p>
+
+        <!-- Heading -->
+        <h2 class="text-5xl font-light  mb-14"  style="font-family: 'Noto Serif Display', serif;">
+            Schedule your complimentary <br/>15-minute intake call
+        </h2>
+
+        <!-- Button -->
+        <div class="flex justify-center pt-4">
+            <button class="bg-[#D9A497] text-white px-10 py-4 text-xl font-semibold shadow-md hover:bg-[#c98a7f] transition duration-300">
+                BOOK TODAY
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="bg-[#FDFBF7] py-16 min-h-screen">
+    <div class="max-w-6xl mx-auto">
+      <!-- Centered Image -->
+      <div class="flex justify-center">
+        <img src="./Assets/Frame 1.svg" alt="Centered Image" class="w-48 h-48">
+      </div>
+    </div>
+    <div class="mt-8 flex flex-col lg:flex-row lg:justify-around text-center w-full px-6 lg:px-0">
+        <div class="mb-8 lg:mb-0">
+            <h2 class="text-4xl font-light mb-10" style="font-family: 'Noto Serif Display', serif;">Contact Information</h2>
+            <p class="text-2xl font-semilight mb-4">Cederquist Counseling 1942 Broadway St.,<br/> STE 314C Boulder, CO 80302</p>
+            <p class="text-2xl font-semilight mb-4 hover:underline">E: melissa@cederquistcounseling.com</p>
+            <p class="text-2xl font-semilight mb-4 hover:underline">P: (720) 515-4388</p>
+        </div>
+        
+        <div class="mb-8 lg:mb-0">
+            <h2 class="text-4xl font-light mb-10" style="font-family: 'Noto Serif Display', serif;">Services</h2>
+            <div class="text-2xl font-semilight space-y-4">
+                <p class="hover:underline">Individual Therapy</p>
+                <p class="hover:underline">Relational & Attachment Therapy</p>
+                <p class="hover:underline">Premarital Counseling</p>
+                <p class="hover:underline">Pregnancy & Postpartum</p>
+                <p class="hover:underline">Career Development</p>
+                <p class="hover:underline">Adult ADHD</p>
+                <p class="hover:underline">Anger Management</p>
+                <p class="hover:underline">Anxiety</p>
+            </div>
+        </div>
+        
+        <div>
+            <h2 class="text-4xl font-light mb-10 text-center" style="font-family: 'Noto Serif Display', serif;">Connect Online</h2>
+            <div class="flex justify-center mb-10 space-x-4 mt-2">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="./Assets/facebook 1.png" alt="Facebook" width="30">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="./Assets/twitter.png" alt="Twitter" width="30">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="./Assets/Group (3).png" alt="Instagram" width="30">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="./Assets/linkedin.png" alt="LinkedIn" width="30">
+                </a>
+            </div>
+            
+            <h2 class="text-4xl font-light mb-6" style="font-family: 'Noto Serif Display', serif;">Newsletter Signup</h2>
+            <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-3">
+                <input type="email" placeholder="Enter your email" class="border border-black px-5 py-3 w-full lg:w-80 text-lg">
+                <button class="bg-[#D9A497] text-white px-8 py-3 text-lg hover:bg-[#c98a7f]">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-16 text-center px-6">
+        <h2 class="text-3xl" style="font-family: 'Noto Serif Display', serif;">Virtually serving the communities of</h2>
+        <p class="mt-8 text-2xl mb-10 font-light">Denver | Boulder | Cherry Hills | Columbine | Bow Mar | Castle Pines | Highlands Ranch | Evergreen | Entire State of Colorado</p>
+        <p class="text-lg">© 2025 Cederquist Counseling</p>
+    </div>
+</section>
+
+  
+  
+  
+
+
+
+
+
+    
+    
+    
+    
+    
+</body>
+</html>
